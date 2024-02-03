@@ -8,12 +8,12 @@ import numpy as np
 from .file import download_checkpoint
 
 RTMLIB_SETTINGS = {
-    'opencv': {
-        'cpu': (cv2.dnn.DNN_BACKEND_OPENCV, cv2.dnn.DNN_TARGET_CPU),
+    # 'opencv': {
+    #     'cpu': (cv2.dnn.DNN_BACKEND_OPENCV, cv2.dnn.DNN_TARGET_CPU),
 
-        # You need to manually build OpenCV through cmake
-        'cuda': (cv2.dnn.DNN_BACKEND_CUDA, cv2.dnn.DNN_TARGET_CUDA)
-    },
+    #     # You need to manually build OpenCV through cmake
+    #     'cuda': (cv2.dnn.DNN_BACKEND_CUDA, cv2.dnn.DNN_TARGET_CUDA)
+    # },
     'onnxruntime': {
         'cpu': 'CPUExecutionProvider',
         'cuda': 'CUDAExecutionProvider'

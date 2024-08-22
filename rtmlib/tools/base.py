@@ -54,9 +54,13 @@ class BaseTool(metaclass=ABCMeta):
         elif backend == 'onnxruntime':
             import onnxruntime as ort
             providers = RTMLIB_SETTINGS[backend][device]
+            
+            options = ort.SessionOptions()
+            options.enable_mem_pattern = False
+            options.enable_cpu_mem_arena = False
 
             self.session = ort.InferenceSession(path_or_bytes=onnx_model,
-                                                providers=[providers])
+                                                providers=[providers], options=options)
 
         elif backend == 'openvino':
             from openvino.runtime import Core

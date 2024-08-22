@@ -16,7 +16,8 @@ RTMLIB_SETTINGS = {
     },
     'onnxruntime': {
         'cpu': 'CPUExecutionProvider',
-        'cuda': 'CUDAExecutionProvider'
+        'cuda': 'CUDAExecutionProvider',
+        'coreml': 'CoreMLExecutionProvider',
     },
 }
 

@@ -145,7 +145,7 @@ class Custom:
                 det_class = getattr(rtmlib_module, det_class)
                 self.det_model = det_class(det,
                                            model_input_size=det_input_size,
-                                           mode=det_mode,
+                                           det_mode=det_mode,
                                            backend=backend,
                                            device=device)
                 self.det_mode = det_mode
